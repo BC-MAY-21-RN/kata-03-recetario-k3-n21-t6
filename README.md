@@ -1,3 +1,4 @@
+<a href="https://codeclimate.com/github/BC-MAY-21-RN/kata-03-recetario-k3-n21-t6/maintainability"><img width="500" src="https://api.codeclimate.com/v1/badges/e671ee8fc22f2e9dbf09/maintainability" /></a>
 ![BrightCoders Logo](img/logo-bc.png)
 
 # Recetario de Cocina App
