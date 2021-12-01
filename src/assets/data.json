@@ -1,0 +1,124 @@
+{
+  "recipes": [
+    {
+      "title": "Peperoni Pizza Pockets",
+      "thumbnail_img" : "./img/recipes/dish0.png",
+      "servings" : "3",
+      "ingredients": [
+        {
+         "name" : "puff pastry",
+         "amount" : "1 sheet"
+        },
+        {
+         "name" : "peperoni",
+         "amount" : "15 slices"
+        },
+        {
+         "name" : "marinada sauce",
+         "amount" : "1 cup"
+        },
+        {
+         "name" : "sherdded mozzarella cheese",
+         "amount" : "1/2 cup"
+        },
+        {
+         "name" : "egg, for egg wash",
+         "amount" : "1"
+        }
+      ]
+    },
+    {
+      "title": "Egg sandwich",
+      "thumbnail_img": "./img/recipes/dish1.png",
+      "servings": "1",
+      "ingredients": [
+        {
+          "name": "egg",
+          "amount": "3"
+        },
+        {
+          "name": "bread",
+          "amount": "2"
+        }
+      ]
+    },
+    {
+      "title": "Cebiche",
+      "thumbnail_img": "./img/recipes/dish2.png",
+      "servings": "4",
+      "ingredients": [
+        {
+          "name": "shrimps",
+          "amount": "1 pound"
+        },
+        {
+          "name": "lemons (juice)",
+          "amount": "5"
+        },
+        {
+          "name": "tomato, finely chopped",
+          "amount": "1/2 cup"
+        },
+        {
+          "name": "onion, finely chopped",
+          "amount": "2 teaspoons"
+        },
+        {
+          "name": "cilantro, finely chopped",
+          "amount": "4 teaspoons"
+        },
+        {
+          "name": "serrano chile, finely chopped",
+          "amount": "2 teaspoons"
+        },
+        {
+          "name": "pepper",
+          "amount": "1 teaspoon"
+        },
+        {
+          "name": "salt",
+          "amount": "1 teaspoon"
+        },
+        {
+          "name": "cucumber, finely chopped",
+          "amount": "5 teaspoons"
+        },
+        {
+          "name": "avocado, chopped in cubes",
+          "amount": "2"
+        },
+        {
+          "name": "oregano",
+          "amount": "1 teaspoon"
+        }
+      ]
+    },
+    {
+      "title": "Chocolate Cookies",
+      "thumbnail_img": "./img/recipes/dish3.png",
+      "servings": "2",
+      "ingredients": [
+        {
+          "name": "sugar",
+          "amount": "1 cup"
+        },
+        {
+          "name": "chocolate",
+          "amount": "1/2 cup"
+        },
+        {
+          "name": "eggs",
+          "amount": "1"
+        },
+        {
+          "name": "butter",
+          "amount": "3/4"
+        },
+        {
+          "name": "salt spoons",
+          "amount": "3/4 "
+        }
+      ]
+    }
+  ]
+}
