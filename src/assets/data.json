@@ -2,7 +2,6 @@
   "recipes": [
     {
       "title": "Peperoni Pizza Pockets",
-      "thumbnail_img" : "./img/recipes/dish0.png",
       "servings" : "3",
       "ingredients": [
         {
@@ -29,7 +28,6 @@
     },
     {
       "title": "Egg sandwich",
-      "thumbnail_img": "./img/recipes/dish1.png",
       "servings": "1",
       "ingredients": [
         {
@@ -44,7 +42,6 @@
     },
     {
       "title": "Cebiche",
-      "thumbnail_img": "./img/recipes/dish2.png",
       "servings": "4",
       "ingredients": [
         {
@@ -95,7 +92,6 @@
     },
     {
       "title": "Chocolate Cookies",
-      "thumbnail_img": "./img/recipes/dish3.png",
       "servings": "2",
       "ingredients": [
         {
