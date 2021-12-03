@@ -32,7 +32,7 @@ const IngredientList = ({ingredients}) => {
     <FlatList
       data={ingredients}
       renderItem={renderItem}
-      ItemSeparatorComponent={() => <View style={{height: 1, backgroundColor:'grey'}} />}
+      ItemSeparatorComponent={() => <View style={{height: 1, backgroundColor:' red'}} />}
       keyExtractor={ ({index}) => index }/>
   );
 };
