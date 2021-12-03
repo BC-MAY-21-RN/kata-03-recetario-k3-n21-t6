@@ -22,7 +22,6 @@ const styles = StyleSheet.create({
     paddingTop: 20,
   },
   search: {
-    width: '95%',
     height: 40,
     padding: 10,
     backgroundColor: '#343435',
@@ -31,14 +30,11 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   cover: {
-    display: 'flex',
-    flexDirection: 'column',
-    width: '100%',
-    height: '40%',
-  },
-  coverThumbnail: {
     flex: 1,
   },
+  // coverThumbnail: {
+  //   height: '100%',
+  // },
   coverTop: {
     justifySelf: 'flex-start',
   },
@@ -52,6 +48,18 @@ const styles = StyleSheet.create({
   coverBottomTitle: {
     fontSize: 24,
     color: 'white',
+  },
+  recipePage: {
+    flex: 1,
+    flexDirection: 'column',
+    backgroundColor: '#282828',
+  },
+  desc: {
+    flex: 1,
+  },
+  ingredient: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
 });
 

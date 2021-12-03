@@ -1,32 +1,30 @@
 import React from 'react';
-import {View, Text, Image, FlatList} from 'react-native';
+import {View, Text, ImageBackground, FlatList} from 'react-native';
 import styles from '../styles/Styles.js';
 
 const Cover = ({recipe, status}) => {
   return (
-    <View style={styles.cover}>
-      <Image style={styles.coverThumbnail} source={require('../assets/images/0.jpeg')} />
-      <View style={styles.coverAbsoluteContainer}>
-        <View style={styles.coverTop}>
+    <View>
+      <ImageBackground resizeMode="cover" style={styles.coverThumbnail} source={require('../assets/images/0.jpeg')} >
+        <View>
           <Text style={[styles.icon, styles.justifyLeft]}>icon</Text>
           <Text style={[styles.icon, styles.justifyRight]}>icon</Text>
           <Text style={[styles.icon, styles.justifyRight]}>icon</Text>
         </View>
-        <View style={styles.coverBottom}>
+        <View>
           <Text style={styles.coverBottomFootext}>{recipe.title}</Text>
           <Text style={styles.coverBottomTitle}>{status}</Text>
         </View>
-      </View>
+      </ImageBackground>
     </View>
   );
 };
 
 const IngredientList = ({ingredients}) => {
   const renderItem = ({item}) => (
-    //recordatorio: agregar estilos de esta madre
-    <View>
-      <Text>{item.name}</Text>
-      <Text>{item.amount}</Text>
+    <View style={styles.ingredient}>
+      <Text style={styles.coverBottomFootext}>{item.name}</Text>
+      <Text style={styles.coverBottomFootext}>{item.amount}</Text>
     </View>
   );
 
@@ -34,14 +32,14 @@ const IngredientList = ({ingredients}) => {
     <FlatList
       data={ingredients}
       renderItem={renderItem}
-      keyExtractor={ item => item.key }/>
+      keyExtractor={ ({index}) => index }/>
   );
 };
 const Description = ({recipe}) => {
   return (
     <View>
-      <Text>Ingredients</Text>
-      <Text>for {recipe.servings} servings</Text>
+      <Text style={styles.coverBottomFootext}>Ingredients</Text>
+      <Text style={styles.coverBottomFootext}>for {recipe.servings} servings</Text>
       <IngredientList ingredients={recipe.ingredients} />
     </View>
   );
@@ -49,9 +47,9 @@ const Description = ({recipe}) => {
 
 const RecipePage = ({recipe}) => {
   return (
-    <View>
-      <Cover recipe={recipe} status="Trending" />
-      <Description recipe={recipe}/>
+    <View style={styles.recipePage}>
+      <Cover style={styles.cover} recipe={recipe} status="Trending" />
+      <Description style={styles.desc} recipe={recipe}/>
     </View>
   );
 };
