@@ -1,7 +1,14 @@
 import React from 'react';
-import { View, Text, TextInput, Image, FlatList } from 'react-native';
+import {
+  View,
+  Text,
+  TextInput,
+  Image,
+  FlatList,
+  TouchableHighlight,
+} from 'react-native';
 import styles from '../styles/Styles.js';
-import { recipes } from '../assets/data.json';
+import {recipes} from '../assets/data.json';
 
 //search bar
 const InputSearch = () => {
@@ -17,37 +24,52 @@ const InputSearch = () => {
 };
 
 //recipes output
-// eslint-disable-next-line react/prop-types
-const Recipe = ({ data }) => {
+const Recipe = ({recipe, navigation}) => {
+  const toRecipe = () => {
+    navigation.navigate('RecipePage', {recipe: {recipe}});
+  };
+
   return (
-    <View style={styles.recipeContainer}>
-      <Image
-        style={styles.recipeImage}
-        source={require('../../img/cover.jpg')}
-      />
-      <Text style={styles.recipeName}>{data.title}</Text>
-    </View>
+    <TouchableHighlight style={styles.recipeContainer} onPress={toRecipe}>
+      <View>
+        <Image
+          style={styles.recipeImage}
+          source={require('../assets/images/0.jpeg')}
+        />
+        <Text style={styles.recipeName}>{recipe.title}</Text>
+      </View>
+    </TouchableHighlight>
   );
 };
 
 //recipe container
-const RecipeContainer = () => {
-  const renderRecipe = ({ item }) => <Recipe data={item} />;
+const RecipeContainer = ({navigation, recipes, category}) => {
+  const renderRecipe = ({item}) => (
+    <Recipe navigation={navigation} recipe={item} />
+  );
 
   return (
-    <FlatList
-      data={recipes}
-      renderItem={renderRecipe}
-      keyExtractor={(recipe) => recipe.id}
-    />
+    <View>
+      <Text style={styles.recipesHeaderType}>{category}</Text>
+      <FlatList
+        horizontal
+        data={recipes}
+        renderItem={renderRecipe}
+        keyExtractor={recipes => recipes.title}
+      />
+    </View>
   );
 };
 
-const MainPage = () => {
+const MainPage = ({navigation}) => {
   return (
     <View style={styles.body}>
       <InputSearch />
-      <Recipe url="./img/cover.jpg" name="foo"></Recipe>
+      <RecipeContainer
+        navigation={navigation}
+        recipes={recipes}
+        category="Recent"
+      />
     </View>
   );
 };

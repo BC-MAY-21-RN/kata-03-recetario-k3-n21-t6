@@ -1,16 +1,15 @@
 import React from 'react';
-import { View, Text, ImageBackground, FlatList } from 'react-native';
+import {View, Text, ImageBackground, FlatList} from 'react-native';
 import styles from '../styles/Styles.js';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const Cover = ({ recipe, status }) => {
+const Cover = ({recipe, status}) => {
   return (
     <ImageBackground
       resizeMode="cover"
       source={require('../assets/images/0.jpeg')}
       style={styles.cover}
-      imageStyle={{ opacity: 0.4 }}
-    >
+      imageStyle={{opacity: 0.4}}>
       <View style={styles.coverTop}>
         <Icon name="close-outline" size={40} color="#fff" />
         <View style={styles.coverIcons}>
@@ -26,8 +25,8 @@ const Cover = ({ recipe, status }) => {
   );
 };
 
-const IngredientList = ({ ingredients }) => {
-  const renderItem = ({ item }) => (
+const IngredientList = ({ingredients}) => {
+  const renderItem = ({item}) => (
     <View style={styles.ingredient}>
       <Text style={styles.coverBottomFootext}>{item.name}</Text>
       <Text style={styles.coverBottomFootext}>{item.amount}</Text>
@@ -39,14 +38,14 @@ const IngredientList = ({ ingredients }) => {
       data={ingredients}
       renderItem={renderItem}
       ItemSeparatorComponent={() => (
-        <View style={{ height: 1, backgroundColor: 'grey' }} />
+        <View style={{height: 1, backgroundColor: 'grey'}} />
       )}
-      keyExtractor={({ name }) => name}
+      keyExtractor={({name}) => name}
     />
   );
 };
 
-const Description = ({ recipe }) => {
+const Description = ({recipe}) => {
   return (
     <View style={styles.cover}>
       <Text style={styles.coverBottomFootext}>Ingredients</Text>
@@ -58,7 +57,12 @@ const Description = ({ recipe }) => {
   );
 };
 
-const RecipePage = ({ recipe }) => {
+//PA ATRAS
+//navigation.goBack()
+//solucionar params.recipe
+
+const RecipePage = ({route, navigation}) => {
+  const {recipe} = route.params.recipe;
   return (
     <View style={styles.recipePage}>
       <Cover recipe={recipe} status="Trending" />

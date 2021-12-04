@@ -9,16 +9,19 @@ const styles = StyleSheet.create({
   recipeContainer: {
     display: 'flex',
     padding: 20,
+    width: 150,
+    padding: 10,
   },
   recipeImage: {
-    borderRadius: 25,
+    borderRadius: 15,
     width: 120,
-    height: '50%',
+    height: 120,
   },
   recipeName: {
-    fontSize: 24,
+    fontSize: 14,
     color: 'white',
-    paddingTop: 20,
+    paddingTop: 5,
+    paddingHorizontal: 5,
   },
   search: {
     height: 40,
@@ -31,7 +34,7 @@ const styles = StyleSheet.create({
   cover: {
     flex: 1,
     justifyContent: 'space-between',
-    padding: 10,
+    padding: 20,
   },
   coverTop: {
     flexDirection: 'row',
@@ -59,6 +62,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginVertical: 10,
+  },
+  recipesHeaderType: {
+    fontSize: 24,
+    color: 'red',
   },
 });
 
