@@ -39,10 +39,10 @@ const styles = StyleSheet.create({
   },
   coverIcons: {
     flexDirection: 'row',
+    width: 70,
+    justifyContent: 'space-between',
   },
-  coverBottom: {
-    
-  },
+  coverBottom: {},
   coverBottomFootext: {
     fontSize: 18,
     color: 'white',
