@@ -1,9 +1,15 @@
 import React from 'react';
-import {View, Text, ImageBackground, FlatList} from 'react-native';
+import {
+  View,
+  Text,
+  ImageBackground,
+  FlatList,
+  TouchableHighlight,
+} from 'react-native';
 import styles from '../styles/Styles.js';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const Cover = ({recipe, status}) => {
+const Cover = ({recipe, status, navigation}) => {
   return (
     <ImageBackground
       resizeMode="cover"
@@ -11,7 +17,9 @@ const Cover = ({recipe, status}) => {
       style={styles.cover}
       imageStyle={{opacity: 0.4}}>
       <View style={styles.coverTop}>
-        <Icon name="close-outline" size={40} color="#fff" />
+        <TouchableHighlight onPress={() => navigation.goBack()}>
+          <Icon name="close-outline" size={40} color="#fff" />
+        </TouchableHighlight>
         <View style={styles.coverIcons}>
           <Icon name="share-outline" size={30} color="#fff" />
           <Icon name="heart-outline" size={30} color="#fff" />
@@ -57,15 +65,11 @@ const Description = ({recipe}) => {
   );
 };
 
-//PA ATRAS
-//navigation.goBack()
-//solucionar params.recipe
-
 const RecipePage = ({route, navigation}) => {
-  const {recipe} = route.params.recipe;
+  const {recipe} = route.params;
   return (
     <View style={styles.recipePage}>
-      <Cover recipe={recipe} status="Trending" />
+      <Cover recipe={recipe} status="Trending" navigation={navigation} />
       <Description recipe={recipe} />
     </View>
   );

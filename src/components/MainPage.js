@@ -26,7 +26,9 @@ const InputSearch = () => {
 //recipes output
 const Recipe = ({recipe, navigation}) => {
   const toRecipe = () => {
-    navigation.navigate('RecipePage', {recipe: {recipe}});
+    navigation.navigate('RecipePage', {
+      recipe: recipe,
+    });
   };
 
   return (

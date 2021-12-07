@@ -23,19 +23,14 @@ const App = () => {
   // return <RecipePage recipe={recipes[2]} />;
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator
+        initialRouteName="Home"
+        screenOptions={{headerShown: false}}>
         <Stack.Screen name="Home" component={MainPage} />
         <Stack.Screen name="RecipePage" component={RecipePage} />
       </Stack.Navigator>
     </NavigationContainer>
-    // <MainPage recipes={recipes} />
-    //no pero desde recipepage tenemos que regresar, necesita navigation para eso
   );
-
-  //es este de aqui
-  // navigation.navigate function: navigation.navigate('RouteName', { /* params go here */ })
 };
 
 export default App;
-
-//Now, we need to wrap the whole app in NavigationContainer. Usually you'd do this in your entry file, such as index.js or App.js:
