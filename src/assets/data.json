@@ -1,6 +1,7 @@
 {
   "recipes": [
     {
+      "id": 0,
       "title": "Peperoni Pizza Pockets",
       "servings" : "3",
       "ingredients": [
@@ -27,6 +28,7 @@
       ]
     },
     {
+      "id": 1,
       "title": "Egg sandwich",
       "servings": "1",
       "ingredients": [
@@ -41,7 +43,8 @@
       ]
     },
     {
-      "title": "Cebiche",
+      "id": 2,
+      "title": "Ceviche",
       "servings": "4",
       "ingredients": [
         {
@@ -91,6 +94,7 @@
       ]
     },
     {
+      "id": 3,
       "title": "Chocolate Cookies",
       "servings": "2",
       "ingredients": [
@@ -113,6 +117,33 @@
         {
           "name": "salt spoons",
           "amount": "3/4 "
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Tacos",
+      "servings": "4",
+      "ingredients": [
+        {
+          "name": "beef",
+          "amount": "1 pound"
+        },
+        {
+          "name": "tortillas",
+          "amount": "1 pound"
+        },
+        {
+          "name": "pineapple",
+          "amount": "1/2 cup"
+        },
+        {
+          "name": "salt",
+          "amount": "2 tsp"
+        },
+        {
+          "name": "oil",
+          "amount": "2 tsp"
         }
       ]
     }

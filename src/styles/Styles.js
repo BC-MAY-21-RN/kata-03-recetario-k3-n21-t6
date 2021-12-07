@@ -8,8 +8,7 @@ const styles = StyleSheet.create({
   },
   recipeContainer: {
     display: 'flex',
-    padding: 20,
-    width: 150,
+    width: 'auto',
     padding: 10,
   },
   recipeImage: {
@@ -22,6 +21,7 @@ const styles = StyleSheet.create({
     color: 'white',
     paddingTop: 5,
     paddingHorizontal: 5,
+    width: 130,
   },
   search: {
     height: 40,
@@ -66,6 +66,12 @@ const styles = StyleSheet.create({
   recipesHeaderType: {
     fontSize: 24,
     color: 'red',
+  },
+  size: {
+    borderRadius: 15,
+    width: 150,
+    height: 150,
+    padding: 10,
   },
 });
 

@@ -8,12 +8,13 @@ import {
 } from 'react-native';
 import styles from '../styles/Styles.js';
 import Icon from 'react-native-vector-icons/Ionicons';
+import recipeImages from '../assets/imagePaths.js';
 
 const Cover = ({recipe, status, navigation}) => {
   return (
     <ImageBackground
       resizeMode="cover"
-      source={require('../assets/images/0.jpeg')}
+      source={recipeImages[recipe.id].foodImage}
       style={styles.cover}
       imageStyle={{opacity: 0.4}}>
       <View style={styles.coverTop}>
@@ -66,12 +67,13 @@ const Description = ({recipe}) => {
 };
 
 const RecipePage = ({route, navigation}) => {
-  const {recipe} = route.params;
+  const {recipe, category} = route.params;
   return (
     <View style={styles.recipePage}>
-      <Cover recipe={recipe} status="Trending" navigation={navigation} />
+      <Cover recipe={recipe} status={category} navigation={navigation} />
       <Description recipe={recipe} />
     </View>
   );
 };
+
 export default RecipePage;
