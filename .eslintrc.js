@@ -22,7 +22,7 @@ module.exports = {
     'no-undef': ['error'],
     'no-console': ['off'],
     'no-unused-vars': ['warn'],
-    'react/prop-types': false,
+    'react/prop-types': ['off'],
     'react-native/no-unused-styles': ['warn'],
     'react-native/split-platform-components': ['warn'],
     'react-native/no-inline-styles': ['warn'],

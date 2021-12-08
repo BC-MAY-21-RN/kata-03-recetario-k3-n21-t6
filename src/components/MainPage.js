@@ -14,12 +14,16 @@ import recipeImages from '../assets/imagePaths.js';
 //search bar
 const InputSearch = () => {
   return (
-    <View>
+    <View style={styles.searchInput}>
       <TextInput
         placeholder="What do you want to eat?"
         placeholderTextColor="white"
         style={styles.search}
       />
+      <View style={styles.searchInputIcons}>
+        <Text style={styles.inputSearchIcon}>icon</Text>
+        <Text style={styles.inputSearchIcon}>icon</Text>
+      </View>
     </View>
   );
 };

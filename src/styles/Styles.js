@@ -73,6 +73,23 @@ const styles = StyleSheet.create({
     height: 150,
     padding: 10,
   },
+  searchInput: {
+    display: 'flex',
+    flexDirection: 'row',
+  },
+  searchInputIcons: {
+    justifySelf: 'flex-end',
+  },
+  inputSearchIcon: {
+    marginLeft: 10,
+  },
+  separateFlatList: {
+    height: 1,
+    backgroundColor: 'grey',
+  },
+  opacityCover: {
+    opacity: 0.4,
+  },
 });
 
 export default styles;

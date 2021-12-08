@@ -16,7 +16,7 @@ const Cover = ({recipe, status, navigation}) => {
       resizeMode="cover"
       source={recipeImages[recipe.id].foodImage}
       style={styles.cover}
-      imageStyle={{opacity: 0.4}}>
+      imageStyle={styles.opacityCover}>
       <View style={styles.coverTop}>
         <TouchableHighlight onPress={() => navigation.goBack()}>
           <Icon name="close-outline" size={40} color="#fff" />
@@ -46,9 +46,7 @@ const IngredientList = ({ingredients}) => {
     <FlatList
       data={ingredients}
       renderItem={renderItem}
-      ItemSeparatorComponent={() => (
-        <View style={{height: 1, backgroundColor: 'grey'}} />
-      )}
+      ItemSeparatorComponent={() => <View style={styles.separateFlatList} />}
       keyExtractor={({name}) => name}
     />
   );
