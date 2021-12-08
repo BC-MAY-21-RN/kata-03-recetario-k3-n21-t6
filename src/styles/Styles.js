@@ -24,11 +24,8 @@ const styles = StyleSheet.create({
     width: 130,
   },
   search: {
-    height: 40,
-    padding: 10,
-    backgroundColor: '#343435',
+    height: 35,
     color: 'white',
-    margin: 10,
     borderRadius: 10,
   },
   cover: {
@@ -76,12 +73,19 @@ const styles = StyleSheet.create({
   searchInput: {
     display: 'flex',
     flexDirection: 'row',
-  },
-  searchInputIcons: {
-    justifySelf: 'flex-end',
+    margin: 10,
+    backgroundColor: '#343435',
+    alignItems: 'center',
   },
   inputSearchIcon: {
     marginLeft: 10,
+    marginRight: 10,
+    color: 'white',
+    fontSize: 20,
+  },
+  iconEnd: {
+    display: 'flex',
+    marginLeft: 'auto',
   },
   separateFlatList: {
     height: 1,

@@ -17,14 +17,15 @@ import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
+//PARA PODER USAR STACKS
 const Stack = createNativeStackNavigator();
 
 const App = () => {
-  // return <RecipePage recipe={recipes[2]} />;
+  // ESTRUCTURA DEL NAVIGATOR , DEFINIMOS HOME PAGE Y SCREENS (CON STACKS)
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Home"
+        initialRouteName="Home" // HOME ES EL mainpage.js
         screenOptions={{headerShown: false}}>
         <Stack.Screen name="Home" component={MainPage} />
         <Stack.Screen name="RecipePage" component={RecipePage} />
