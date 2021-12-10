@@ -1,46 +1,7 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  TextInput,
-  Image,
-  FlatList,
-  TouchableHighlight,
-} from 'react-native';
-import styles from '../styles/Styles.js';
-import Icon from 'react-native-vector-icons/Ionicons';
-import {recipes} from '../assets/data.json';
-import recipeImages from '../assets/imagePaths.js';
-
-//search bar
-const InputSearch = () => {
-  return (
-    //Retornamos el componente con el input y los iconos
-    <View style={styles.searchInput}>
-      {/*Componente input*/}
-      <Icon
-        style={styles.inputSearchIcon}
-        name="search-outline"
-        size={30}
-        color="#fff"
-      />
-      <TextInput
-        placeholder="What do you want to eat?"
-        placeholderTextColor="white"
-        style={styles.search}
-      />
-      {/*View de los iconos */}
-      <View style={styles.iconEnd}>
-        <Icon
-          style={styles.inputSearchIcon}
-          name="mic-outline"
-          size={30}
-          color="#fff"
-        />
-      </View>
-    </View>
-  );
-};
+import {Text, Image, FlatList, TouchableHighlight, View} from 'react-native';
+import styles from '../../styles/Styles.js';
+import recipeImages from '../../assets/imagePaths.js';
 
 //MINIATURAS CON NOMBRE
 const Recipe = ({recipe, navigation, category}) => {
@@ -73,7 +34,7 @@ const Recipe = ({recipe, navigation, category}) => {
 };
 
 //recipe container (recibimos los 3 props desde el componente MainPage)
-const RecipeContainer = ({navigation, recipes, category}) => {
+export const RecipeContainer = ({navigation, recipes, category}) => {
   //Funcion render para visualizar las recetas llamada por el FlatList
   // va a traer las miniaturas generadas por el componente Recipe que definimos antes (imagen pequeñá con su titulo y en el main page ya las muestra searadas por categoria)
   const renderRecipe = ({item}) => (
@@ -95,31 +56,3 @@ const RecipeContainer = ({navigation, recipes, category}) => {
     </View>
   );
 };
-
-//Componente Principal (HOMEPAGE}
-//Recibimos la navegacion y la implementamos
-const MainPage = ({navigation}) => {
-  return (
-    //Retorna los componentes de Input Search, y Trending y Recent
-    <View style={styles.body}>
-      {/*Componente  Input Search */}
-      <InputSearch />
-
-      {/*Componente  RecipeContainer para el Trending */}
-      <RecipeContainer
-        navigation={navigation} //Para entre las pantallas
-        recipes={[recipes[0], recipes[1], recipes[2]]} //Los obtenemos del data.json que importamos al inicio
-        category="Trending"
-      />
-
-      {/*Componente  RecipeContainer para el Recent */}
-      <RecipeContainer
-        navigation={navigation} //Para entre las pantallas
-        recipes={[recipes[2], recipes[3], recipes[4]]}
-        category="Recent"
-      />
-    </View>
-  );
-};
-
-export default MainPage;
