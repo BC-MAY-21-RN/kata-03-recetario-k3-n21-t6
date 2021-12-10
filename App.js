@@ -9,13 +9,10 @@ Co-authored-by: danthek <abraham8507@gmail.com>
 Co-authored-by: Darkboy5120 <hmaldonado0@ucol.mx> 
 Co-authored-by: Hugoneytor <halvarez0@ucol.mx> 
 */
-
-import MainPage from './src/components/MainPage.js';
-import RecipePage from './src/components/RecipePage.js';
-
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {MainPage, RecipePage} from './src/screens';
 
 //PARA PODER USAR STACKS
 const Stack = createNativeStackNavigator();
